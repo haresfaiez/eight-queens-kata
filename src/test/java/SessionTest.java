@@ -1,6 +1,7 @@
 import java.util.*;
 import static org.junit.Assert.*;
 import org.junit.*;
+import board.SingletonBoard;
 
 public class SessionTest {
   @Test

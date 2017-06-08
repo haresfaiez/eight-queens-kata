@@ -1,4 +1,5 @@
 import java.util.*;
+import board.Board;
 
 public class Session {
   Board board;

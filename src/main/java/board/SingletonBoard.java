@@ -1,3 +1,5 @@
+package board;
+
 public class SingletonBoard extends Board {
 
   @Override
