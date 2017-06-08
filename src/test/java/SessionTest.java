@@ -4,8 +4,9 @@ import org.junit.*;
 
 public class SessionTest {
   @Test
-  public void nullBoard() {
-    Session actual = new Session();
-    assertEquals(Collections.emptyList(), actual.queens);
+  public void singletonBoardHaveOneQueen() {
+    Session aSession = new Session(new SingletonBoard());
+
+    assertEquals("[1, 1]", aSession.eval());
   }
 }
