@@ -5,6 +5,16 @@ import board.*;
 
 public class BoardTest {
   @Test
+  public void boardWithFourSqauresWritesOneQueen() {
+    Board aBoard = SingletonBoard.count(2);
+
+    StringBuffer actual = new StringBuffer();
+    aBoard.dumbTo(actual);
+
+    assertEquals("[1, 1]", actual.toString());
+  }
+
+  @Test
   public void emptyBoardWritesNothing() {
       Board aBoard = new EmptyBoard();
 
@@ -16,7 +26,7 @@ public class BoardTest {
 
   @Test
   public void singletonBoardWritesOneQueen() {
-      Board aBoard = new SingletonBoard();
+      Board aBoard = SingletonBoard.count(1);
 
       StringBuffer actual = new StringBuffer();
       aBoard.dumbTo(actual);

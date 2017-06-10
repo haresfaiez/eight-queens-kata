@@ -1,5 +1,7 @@
 package board;
 
 public abstract class Board {
-  public abstract void dumbTo(StringBuffer compound);
+  public void dumbTo(StringBuffer compound) {
+    compound.append("");
+  }
 }
