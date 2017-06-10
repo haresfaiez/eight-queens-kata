@@ -10,7 +10,7 @@ public class Session {
 
   public Object eval() {
     StringBuffer result = new StringBuffer();
-    this.board.dumbTo(result);
+    this.board.dumpTo(result);
     return result.toString();
   }
 }

@@ -10,7 +10,7 @@ public class BoardTest {
       Board aBoard = new EmptyBoard();
 
       StringBuffer actual = new StringBuffer();
-      aBoard.dumbTo(actual);
+      aBoard.dumpTo(actual);
 
       assertEquals("", actual.toString());
   }
@@ -20,7 +20,7 @@ public class BoardTest {
       Board aBoard = PopulatedBoard.chess();
 
       StringBuffer actual = new StringBuffer();
-      aBoard.dumbTo(actual);
+      aBoard.dumpTo(actual);
 
       assertEquals("[1, 1]", actual.toString());
   }

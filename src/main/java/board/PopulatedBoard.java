@@ -12,8 +12,8 @@ public class PopulatedBoard extends Board {
   }
 
   @Override
-  public void dumbTo(StringBuffer compound) {
-    super.dumbTo(compound);
+  public void dumpTo(StringBuffer compound) {
+    super.dumpTo(compound);
     compound.append("[1, 1]");
   }
 
