@@ -2,24 +2,24 @@ import java.util.*;
 import static org.junit.Assert.*;
 import org.junit.*;
 import board.*;
-import queen.Solution;
+import solution.Queen;
 
 public class NextQueenTest {
 
   @Test
   public void theSecondQueenIsInTheThirdRow() {
     PopulatedBoard aSolution = new PopulatedBoard();
-    assertEquals(new Solution(3, 2), aSolution.after(new Solution(1, 1)));
+    assertEquals(Queen.at(3, 2), aSolution.after(Queen.at(1, 1)));
   }
 
   @Test
   public void theFirstQueenIsInTheTopLeft() {
     PopulatedBoard aSolution = new PopulatedBoard();
-    assertEquals(new Solution(1, 1), aSolution.after());
+    assertEquals(Queen.at(1, 1), aSolution.after());
   }
 
   @Test
   public void equalQueensHaveTheSamePositionOnTheBoard() {
-    assertEquals(new Solution(1, 1), new Solution(1, 1));
+    assertEquals(Queen.at(1, 1), Queen.at(1, 1));
   }
 }

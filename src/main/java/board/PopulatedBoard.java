@@ -1,5 +1,5 @@
 package board;
-import queen.Solution;
+import solution.Queen;
 
 public class PopulatedBoard extends Board {
 
@@ -14,10 +14,10 @@ public class PopulatedBoard extends Board {
   }
 
   public Object after() {
-    return new Solution(1, 1);
+    return Queen.at(1, 1);
   }
 
-  public Object after(Solution theLast) {
+  public Object after(Queen theLast) {
     return theLast.next();
   }
 
