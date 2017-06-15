@@ -19,4 +19,8 @@ public class Solution {
     return ((Solution) anOther).column.equals(this.column)
         && ((Solution) anOther).row.equals(this.row);
   }
+
+  public static Solution at(Integer aColumn, Integer aRow) {
+    return new Solution(aColumn, aRow);
+  }
 }
