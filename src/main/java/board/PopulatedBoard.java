@@ -9,7 +9,7 @@ public class PopulatedBoard extends Board {
   }
 
   @Override
-  public Board put(Object aQueen) {
+  public Board with(Object aQueen) {
     return new PopulatedBoard();
   }
 

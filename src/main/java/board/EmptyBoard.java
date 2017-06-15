@@ -8,9 +8,9 @@ public class EmptyBoard extends Board {
   }
 
   @Override
-  public Board put(Object aQueen) {
+  public Board with(Object aQueen) {
     Board result = new PopulatedBoard();
-    return result.put(aQueen);
+    return result.with(aQueen);
   }
 
   @Override
