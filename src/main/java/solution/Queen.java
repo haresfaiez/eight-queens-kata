@@ -14,7 +14,7 @@ public class Queen {
     Queen result = this;
     if (result.isInDiagonalConflitWith(in)) {
       result = result.verticalIncrement(in.column)
-                     .verticalIncrement(in.column);      
+                     .verticalIncrement(in.column);
     }
     return result.row;
   }
