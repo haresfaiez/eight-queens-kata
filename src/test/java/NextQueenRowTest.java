@@ -7,17 +7,24 @@ import solution.Queen;
 public class NextQueenRowTest {
 
   @Test
-  public void twoQueensInTheSameRowAreNotAllowed() {
-    Board actual = Board.empty().with(Queen.at(2, 1));
+  public void secondQueenIsNotDiagonallyAlignedToTheFirstOne() {
+    Board actual = Board.empty().with(Queen.at(1, 1));
 
-    assertNotEquals(2, actual.rowForColumn(1));
+    assertNotEquals(2, actual.rowForColumn(2));
   }
 
   @Test
-  public void secondQueenRowShouldBeDifferentFromTheFirstOneRow() {
+  public void twoQueensInTheSameRowAreNotAllowed() {
+    Board actual = Board.empty().with(Queen.at(2, 1));
+
+    assertNotEquals(2, actual.rowForColumn(2));
+  }
+
+  @Test
+  public void secondQueenRowIsDifferentFromTheFirstOneRow() {
     Board actual = Board.empty().with(Queen.at(1, 1));
 
-    assertNotEquals(1, actual.rowForColumn(1));
+    assertNotEquals(1, actual.rowForColumn(2));
   }
 
   @Test

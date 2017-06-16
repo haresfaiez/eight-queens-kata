@@ -5,7 +5,7 @@ import solution.Queen;
 public class EmptyBoard extends Board<Queen> {
 
   @Override
-  public Object rowForColumn(Object aColumn) {
+  public Object rowForColumn(Integer aColumn) {
     return 1;
   }
 

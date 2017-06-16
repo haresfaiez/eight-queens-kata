@@ -7,6 +7,6 @@ public class QueenIncrementTest {
 
   @Test
   public void incrementOfLastRowIsTheFirstRow() {
-    assertEquals(new Integer(1), Queen.at(8, 1).verticalIncrement());
+    assertEquals(Queen.at(1, 1), Queen.at(8, 1).verticalIncrement(1));
   }
 }

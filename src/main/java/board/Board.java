@@ -4,7 +4,7 @@ import solution.Queen;
 
 public abstract class Board<SolutionType> {
 
-  abstract public Object rowForColumn(Object aColumn);
+  abstract public Object rowForColumn(Integer aColumn);
   abstract public Board with(SolutionType aSolution);
   abstract public void dumpTo(StringBuffer compound);
 

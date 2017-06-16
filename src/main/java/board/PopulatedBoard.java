@@ -7,8 +7,9 @@ public class PopulatedBoard extends Board<Queen> {
   Queen content;
 
   @Override
-  public Object rowForColumn(Object aColumn) {
-    return this.content.verticalIncrement();
+  public Object rowForColumn(Integer aColumn) {
+    Queen result = this.content.verticalIncrement(aColumn);
+    return result.freeDiagonal(this.content);
   }
 
   @Override

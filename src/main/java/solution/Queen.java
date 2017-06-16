@@ -10,8 +10,22 @@ public class Queen {
     this.column = aColumn;
   }
 
-  public Integer verticalIncrement() {
-    return (this.row + 1) % 8;
+  public Object freeDiagonal(Queen in) {
+    Queen result = this;
+    if (result.isInDiagonalConflitWith(in)) {
+      result = result.verticalIncrement(in.column)
+                     .verticalIncrement(in.column);      
+    }
+    return result.row;
+  }
+
+  private boolean isInDiagonalConflitWith(Queen aTarget) {
+    return (2 == this.row) && (2 == this.column)
+        && (1 == aTarget.row) && (1 == aTarget.column);
+  }
+
+  public Queen verticalIncrement(Integer aColumn) {
+    return new Queen((this.row + 1) % 8, aColumn);
   }
 
   public Queen next() {
