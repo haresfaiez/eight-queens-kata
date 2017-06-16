@@ -1,9 +1,11 @@
 package board;
 
-public abstract class Board {
+import solution.Queen;
+
+public abstract class Board<SolutionType> {
 
   abstract public Object rowForColumn(Object aColumn);
-  abstract public Board with(Object aQueen);
+  abstract public Board with(SolutionType aSolution);
   abstract public void dumpTo(StringBuffer compound);
 
   public static Board empty() {

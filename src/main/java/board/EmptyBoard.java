@@ -1,6 +1,8 @@
 package board;
 
-public class EmptyBoard extends Board {
+import solution.Queen;
+
+public class EmptyBoard extends Board<Queen> {
 
   @Override
   public Object rowForColumn(Object aColumn) {
@@ -8,9 +10,9 @@ public class EmptyBoard extends Board {
   }
 
   @Override
-  public Board with(Object aQueen) {
+  public Board with(Queen aSolution) {
     Board result = new PopulatedBoard();
-    return result.with(aQueen);
+    return result.with(aSolution);
   }
 
   @Override

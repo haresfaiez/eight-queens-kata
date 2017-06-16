@@ -10,6 +10,10 @@ public class Queen {
     this.column = aColumn;
   }
 
+  public Integer verticalIncrement() {
+    return this.row + 1;
+  }
+
   public Queen next() {
     return new Queen(this.row + 2, this.column + 1);
   }

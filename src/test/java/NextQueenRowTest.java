@@ -8,6 +8,13 @@ public class NextQueenRowTest {
 
   @Test
   public void twoQueensInTheSameRowAreNotAllowed() {
+    Board actual = Board.empty().with(Queen.at(1, 2));
+
+    assertNotEquals(2, actual.rowForColumn(1));
+  }
+
+  @Test
+  public void secondQueenRowShouldBeDifferentFromTheFirstOneRow() {
     Board actual = Board.empty().with(Queen.at(1, 1));
 
     assertNotEquals(1, actual.rowForColumn(1));

@@ -1,16 +1,21 @@
 package board;
+
 import solution.Queen;
 
-public class PopulatedBoard extends Board {
+public class PopulatedBoard extends Board<Queen> {
+
+  Queen content;
 
   @Override
   public Object rowForColumn(Object aColumn) {
-    return 2;
+    return this.content.verticalIncrement();
   }
 
   @Override
-  public Board with(Object aQueen) {
-    return new PopulatedBoard();
+  public Board with(Queen aQueen) {
+    PopulatedBoard result = new PopulatedBoard();
+    result.content = aQueen;
+    return result;
   }
 
   public Object after() {
