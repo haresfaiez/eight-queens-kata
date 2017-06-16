@@ -5,13 +5,13 @@ public class Queen {
   Integer row;
   Integer column;
 
-  public Queen(Integer aColumn, Integer aRow) {
+  Queen(Integer aRow, Integer aColumn) {
     this.row    = aRow;
     this.column = aColumn;
   }
 
   public Integer verticalIncrement() {
-    return this.row + 1;
+    return (this.row + 1) % 8;
   }
 
   public Queen next() {
@@ -24,7 +24,7 @@ public class Queen {
         && ((Queen) anOther).row.equals(this.row);
   }
 
-  public static Queen at(Integer aColumn, Integer aRow) {
-    return new Queen(aColumn, aRow);
+  public static Queen at(Integer aRow, Integer aColumn) {
+    return new Queen(aRow, aColumn);
   }
 }
