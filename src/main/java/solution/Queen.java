@@ -10,11 +10,10 @@ public class Queen {
     this.column = aColumn;
   }
 
-  public Object freeDiagonal(Queen in) {
+  public Object freeDiagonal(Queen existing) {
     Queen result = this;
-    if (result.isInDiagonalConflitWith(in)) {
-      result = result.verticalIncrement(in.column)
-                     .verticalIncrement(in.column);
+    if (result.isInDiagonalConflitWith(existing)) {
+	result = result.verticalIncrement(0);
     }
     return result.row;
   }
@@ -24,8 +23,8 @@ public class Queen {
         && (1 == aTarget.row) && (1 == aTarget.column);
   }
 
-  public Queen verticalIncrement(Integer aColumn) {
-    return new Queen((this.row + 1) % 8, aColumn);
+  public Queen verticalIncrement(Integer resultColumn) {
+    return new Queen((this.row + 1) % 8, resultColumn);
   }
 
   public Queen next() {
